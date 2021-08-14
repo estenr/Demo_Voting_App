@@ -18,7 +18,14 @@ spec:
         app: demo-voting-app
     spec:
       containers:
-      - name: redis
-        image: redis
+      - image: redis:alpine
+        name: redis
         ports:
         - containerPort: 6379
+          name: redis
+        volumeMounts:
+        - mountPath: /data
+          name: redis-data
+      volumes:
+      - name: redis-data
+        emptyDir: {}
