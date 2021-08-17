@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: voting-app
-        image: dockersamples/examplevotingapp_result
+        image: bretfisher/examplevotingapp_result
         ports:
         - containerPort: 80
